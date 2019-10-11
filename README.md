@@ -18,9 +18,13 @@ Se debe tener instalados los siguientes programas en nuestro sistema operativo:
 
 Se agrego la funcion send para que los puntos ingresados por el usuario sean publicados en el topico /topic/newpoint
 
-![alt text](https://github.com/diego2097/laboratorio6-arsw/blob/master/img/puntos.PNG "puntos")
+![alt text](https://github.com/diego2097/laboratorio7-arsw/blob/master/img/send.PNG "puntos")
 
+
+Se llama esta funcion desde publishPoint para que cada vez que sea enviado un punto se publique en el topico. 
+
+![alt text](https://github.com/diego2097/laboratorio7-arsw/blob/master/img/calling_send.PNG "puntos2")
 
 En el modulo se modifico la funcion connectAndSubscribe para que se envie una alerta a todos los usuarios cada vez que un nuevo punto es agregado al topico /topic/newpoint
 
-![alt text](https://github.com/diego2097/laboratorio6-arsw/blob/master/img/puntos.PNG "puntos")
+![alt text](https://github.com/diego2097/laboratorio7-arsw/blob/master/img/subscribe_topics.PNG "subscribe")
