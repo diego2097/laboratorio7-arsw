@@ -33,7 +33,7 @@ var app = (function () {
     };
 
 
-    var connectAndSubscribe = function () {
+    var connectAndSubscribe = function (callback) {
         console.info('Connecting to WS...');
         var socket = new SockJS('/stompendpoint');
         stompClient = Stomp.over(socket);
@@ -43,13 +43,48 @@ var app = (function () {
             console.log('Connected: ' + frame);
             stompClient.subscribe('/topic/newpoint', function (eventbody) {
                 var theObject=JSON.parse(eventbody.body);
-                alert(theObject.x + " " +theObject.y)
+                callback(theObject.x,theObject.y)
+                //alert(theObject.x + " " +theObject.y)
                 
             });
         });
-
     };
     
+	var initMouse = function () {
+		console.info('initialized');
+		var canvas = document.getElementById("canvas")
+		context = canvas.getContext("2d");
+
+		if (window.PointerEvent) {
+			canvas.addEventListener("pointerdown", draw, false);
+		}
+    };
+    
+    var draw = function () {
+        var canvas = document.getElementById("canvas")
+        context = canvas.getContext("2d");
+        var offsetleft = parseInt(getOffset(canvas).left, 10);
+	    var offsettop = parseInt(getOffset(canvas).top, 10);
+       // var posicion = getMousePosition(evt);
+        var x =  event.pageX - offsetleft;
+        var y =  event.pageY - offsettop;
+        app.publishPoint(x,y);
+        //connectAndSubscribe(app.publishPoint)
+    };
+    
+    var getOffset = function (obj) {
+		var offsetLeft = 0;
+		var offsetTop = 0;
+		do {
+			if (!isNaN(obj.offsetLeft)) {
+				offsetLeft += obj.offsetLeft;
+			}
+			if (!isNaN(obj.offsetTop)) {
+				offsetTop += obj.offsetTop;
+			}
+		} while (obj = obj.offsetParent);
+		return { left: offsetLeft, top: offsetTop };
+	};
     
 
     return {
@@ -58,7 +93,9 @@ var app = (function () {
             var can = document.getElementById("canvas");
             
             //websocket connection
-            connectAndSubscribe();
+            connectAndSubscribe(app.publishPoint);
+            initMouse();
+
         },
 
         publishPoint: function(px,py){

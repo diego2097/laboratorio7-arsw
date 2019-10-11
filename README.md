@@ -28,3 +28,14 @@ Se llama esta funcion desde publishPoint para que cada vez que sea enviado un pu
 En el modulo se modifico la funcion connectAndSubscribe para que se envie una alerta a todos los usuarios cada vez que un nuevo punto es agregado al topico /topic/newpoint
 
 ![alt text](https://github.com/diego2097/laboratorio7-arsw/blob/master/img/subscribe_topics.PNG "subscribe")
+
+### Segunda parte 
+
+Se agregro el callback en el parametro de la funcion connectAndSubscribe para que llame la funcion publishpoint cuando un punto es agregado, y esta funcion se encarga de pintar los puntos en todos los usuarios. 
+
+![alt text](https://github.com/diego2097/laboratorio6-arsw/blob/master/img/pintar_punto.PNG "puntos3")
+
+
+Se agrego la funcion initmouse y draw que son las encargadas de recibir los puntos clickeados y llamar a publishpoint para que los pinte. 
+
+![alt text](https://github.com/diego2097/laboratorio6-arsw/blob/master/img/mouse.PNG "puntos4")
