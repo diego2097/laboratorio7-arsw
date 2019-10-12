@@ -75,7 +75,10 @@ modificando dibujo con id 3
 ![alt text](https://github.com/diego2097/laboratorio7-arsw/blob/master/img/dibujo4.PNG "db1")
 
 
+# Autores 
 
+- Diego Alejandro Corredor Tolosa 
+- Luis Fernando Pizza Gamba
 
 
 
