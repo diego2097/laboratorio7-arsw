@@ -39,3 +39,47 @@ Se agregro el callback en el parametro de la funcion connectAndSubscribe para qu
 Se agrego la funcion initmouse y draw que son las encargadas de recibir los puntos clickeados y llamar a publishpoint para que los pinte. 
 
 ![alt text](https://github.com/diego2097/laboratorio7-arsw/blob/master/img/mouse.PNG "puntos4")
+
+como podemos ver en la imagen al clickear en una instancia la otra se actualiza automaticamente
+
+![alt text](https://github.com/diego2097/laboratorio7-arsw/blob/master/img/click1.PNG "puntos4")
+
+![alt text](https://github.com/diego2097/laboratorio7-arsw/blob/master/img/click2.PNG "puntos4")
+
+### Tercera parte 
+
+Se agrego la funcion connect, la cual es accionada cual boton conectarse es oprimido. 
+
+![alt text](https://github.com/diego2097/laboratorio7-arsw/blob/master/img/connect_function.PNG "function")
+
+Tambien se agrego una variable id en app.js para registrar el id de cada dibujo y enviar este al respectivo topico. 
+
+![alt text](https://github.com/diego2097/laboratorio7-arsw/blob/master/img/id_conexion.PNG "function2")
+
+Se agrego el boton y el campo para registrar y modificar un dibujo. 
+
+![alt text](https://github.com/diego2097/laboratorio7-arsw/blob/master/img/connect-html.PNG "function3")
+
+Como se puede observar en la imagen siguiente, se accede a dos dibujos con ids 5 y 3, y cada uno es modificado por dos clientes al tiempo. 
+
+modificando dibujo con id 5 
+
+![alt text](https://github.com/diego2097/laboratorio7-arsw/blob/master/img/dibujo1.PNG "db1")
+
+![alt text](https://github.com/diego2097/laboratorio7-arsw/blob/master/img/dibujo2.PNG "db1")
+
+modificando dibujo con id 3
+
+![alt text](https://github.com/diego2097/laboratorio7-arsw/blob/master/img/dibujo3.PNG "db1")
+
+![alt text](https://github.com/diego2097/laboratorio7-arsw/blob/master/img/dibujo4.PNG "db1")
+
+
+
+
+
+
+
+
+
+
