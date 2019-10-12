@@ -2,7 +2,7 @@
 ## Empezando
 Se debe de clonar el proyecto, para esto utilizaremos el comando git clone. ubíquese la carpeta a guardar el proyecto y escriba el siguiente comando en la terminal:
  
- ### git clone https://github.com/diego2097/laboratorio6-arsw
+ ### git clone https://github.com/diego2097/laboratorio7-arsw
 Una vez clonado, ubicarse en la carpeta del proyecto. al ingresar podra ejecutarlo de forma inmediata mediante el comando. 
 ```
 mvn exec:java -Dexec.mainClass="edu.eci.arsw.collabpaint.CollabPaintApplication.main"
